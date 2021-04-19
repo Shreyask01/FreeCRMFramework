@@ -9,6 +9,7 @@ public class ContactsPageHelper extends TestBase {
 	String actualResult = "";
 
 
+	//this is object repository for contacts page
 	
 	public void createConntacts() throws IOException {
 		object_Click("contacts_XPATH");
@@ -18,4 +19,6 @@ public class ContactsPageHelper extends TestBase {
 		object_Click("ContactsSave_XPATH");
 		
 	}
+	
+	//T
 }
