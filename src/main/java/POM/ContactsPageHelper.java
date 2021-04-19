@@ -16,6 +16,8 @@ public class ContactsPageHelper extends TestBase {
 		object_Click("CreateContacts_XPATH");
 		setText("Firstname_XPATH",helper.get("FirstName"));
 		setText("Lastname_XPATH",helper.get("LastName"));
+		object_Click("Social_XPATH");
+		clickByText("Social_XPATH", helper.get("social"));
 		object_Click("ContactsSave_XPATH");
 		
 	}

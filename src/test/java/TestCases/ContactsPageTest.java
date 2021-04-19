@@ -25,17 +25,17 @@ public class ContactsPageTest extends TestBase {
 	public void contactsPageTest(Hashtable<String, String> data) throws IOException, InterruptedException {
 
 		String TCNO = data.get("TC No.");
-		String URL = data.get("URL");
 		String UserName = data.get("UserName");
 		String Password = data.get("Password");
 		String Firstname = data.get("First  Name");
 		String Lastname = data.get("Last Name");
+		String SocialSite = data.get("Social");
 		rowNum = Integer.parseInt(data.get("rowNum"));
 
 		System.out.println(TCNO);
-		System.out.println(URL);
 		System.out.println(Firstname);
 		System.out.println(Lastname);
+		System.out.println(SocialSite);
 
 		// Putting Data in another Hash table so that we can use in helper/POM
 		helper.put("userName", UserName);
@@ -43,6 +43,7 @@ public class ContactsPageTest extends TestBase {
 
 		helper.put("FirstName", Firstname);
 		helper.put("LastName", Lastname);
+		helper.put("social", SocialSite);
 
 		System.out.println(helper);
 
@@ -51,14 +52,14 @@ public class ContactsPageTest extends TestBase {
 		contactspagehelper = new ContactsPageHelper();
 
 		// Extent report
-		test = report.startTest("loginPageTest[TC No :" + TCNO + "]");
+		test = report.startTest("ContactsPageTest[TC No :" + TCNO + "]");
 
 		// Output excel object creation
 		ExcelReader outputExcel = new ExcelReader(
 				System.getProperty("user.dir") + "\\Outputs\\" + timeStamp + "\\Output_" + timeStamp + ".xlsx");
 
 		// TestCase start
-		invokeBrowser(URL);
+		invokeBrowser();
 		loginpagehelper.login();
 		contactspagehelper.createConntacts();
 

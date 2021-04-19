@@ -43,6 +43,7 @@ public class TestBase {
 	public static Hashtable<String, String> helper1 = new Hashtable<String, String>();
 	public static ExcelReader excel;
 
+
 	public static String timeStamp = new SimpleDateFormat("ddMMyyHHmmss").format(Calendar.getInstance().getTime());
   
 	static {
@@ -72,6 +73,7 @@ public class TestBase {
 		OR.load(fs);
 	    excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\main\\java\\InputData\\"+pro.getProperty("ExcelsheetName")+".xlsx");
+	    //URL = pro.getProperty("URL");
 	}
 
 	public static void copyOutputFile() throws IOException {
@@ -81,8 +83,8 @@ public class TestBase {
 		FileUtils.copyFile(src, dest);
 	}
 
-	public static void invokeBrowser(String URL) throws IOException {
-
+	public static void invokeBrowser() throws IOException {
+		String URL = pro.getProperty("URL");
 		String BrowserName = pro.getProperty("Browser");
 
 		if (BrowserName.equalsIgnoreCase("chrome")) {
@@ -120,6 +122,20 @@ public class TestBase {
 			driver.findElement(By.className(OR.getProperty(locator))).click();
 		}
 
+	}
+	
+	
+	public static void clickByText(String locator, String text) {
+		
+		if (locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath("//*[text()='"+text+"']")).click();
+		} else if (locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		} else if (locator.endsWith("_NAME")) {
+			driver.findElement(By.name(OR.getProperty(locator))).click();
+		} else if (locator.endsWith("_CLASS")) {
+			driver.findElement(By.className(OR.getProperty(locator))).click();
+		}	
 	}
 
 	public static void setText(String locator, String value) throws IOException {

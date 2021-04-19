@@ -8,6 +8,8 @@ public class LoginPageHelper extends TestBase {
 
 	String actualResult = "";
 
+	//this is loginpage
+	
 	public String login() throws IOException {
 		setText("emailField_NAME", helper.get("userName"));
 		setText("passwordField_NAME", helper.get("password"));
