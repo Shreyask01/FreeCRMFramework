@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-20T00:31:34 IST" name="Default suite" finished-at="2021-04-20T00:33:42 IST" duration-ms="128389">
+  <suite started-at="2021-04-20T23:44:05 IST" name="Default suite" finished-at="2021-04-20T23:47:41 IST" duration-ms="215786">
     <groups>
     </groups>
-    <test started-at="2021-04-20T00:31:34 IST" name="Default test" finished-at="2021-04-20T00:33:42 IST" duration-ms="128389">
+    <test started-at="2021-04-20T23:44:05 IST" name="Default test" finished-at="2021-04-20T23:47:41 IST" duration-ms="215786">
       <class name="TestCases.ContactsPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T00:31:32 IST" name="setUp" finished-at="2021-04-20T00:31:34 IST" duration-ms="1553" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T23:44:03 IST" name="setUp" finished-at="2021-04-20T23:44:05 IST" duration-ms="1694" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="contactsPageTest(java.util.Hashtable)[pri:1, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T00:31:34 IST" name="contactsPageTest" data-provider="dp" finished-at="2021-04-20T00:32:17 IST" duration-ms="43284" status="PASS">
+        <test-method signature="contactsPageTest(java.util.Hashtable)[pri:1, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T23:44:05 IST" name="contactsPageTest" data-provider="dp" finished-at="2021-04-20T23:44:51 IST" duration-ms="45468" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{First  Name=Vaibhav , Password=Joker@007, Last Name=Hatge, Social=Facebook, UserName=hatgevaibhav69@gmail.com, RowNum=2, rowNum=2, TC No.=1.0}]]>
+                <![CDATA[{RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expected Result=Vaibhav Hatge, Social=Facebook, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, rowNum=2, TC No.=1.0, Last Name=Hatge}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactsPageTest -->
-        <test-method signature="contactsPageTest(java.util.Hashtable)[pri:1, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T00:32:17 IST" name="contactsPageTest" data-provider="dp" finished-at="2021-04-20T00:33:00 IST" duration-ms="42471" status="PASS">
+        <test-method signature="contactsPageTest(java.util.Hashtable)[pri:1, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T23:44:51 IST" name="contactsPageTest" data-provider="dp" finished-at="2021-04-20T23:46:01 IST" duration-ms="70056" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{First  Name=Shreyas, Password=Joker@007, Last Name=Kolambakar, Social=Twitter, UserName=hatgevaibhav69@gmail.com, RowNum=3, rowNum=3, TC No.=2.0}]]>
+                <![CDATA[{RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=The field First Name is required, Social=Twitter, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, rowNum=3, TC No.=2.0, Last Name=Kolambakar}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactsPageTest -->
-        <test-method signature="contactsPageTest(java.util.Hashtable)[pri:1, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T00:33:00 IST" name="contactsPageTest" data-provider="dp" finished-at="2021-04-20T00:33:42 IST" duration-ms="42524" status="PASS">
+        <test-method signature="contactsPageTest(java.util.Hashtable)[pri:1, instance:TestCases.ContactsPageTest@13518f37]" started-at="2021-04-20T23:46:01 IST" name="contactsPageTest" data-provider="dp" finished-at="2021-04-20T23:47:41 IST" duration-ms="100106" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{First  Name=Ankita, Password=Joker@007, Last Name=Shingre, Social=LinkedIn, UserName=hatgevaibhav69@gmail.com, RowNum=4, rowNum=4, TC No.=3.0}]]>
+                <![CDATA[{RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Result=The field Last Name is required, Social=LinkedIn, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, rowNum=4, TC No.=3.0, Last Name=}]]>
               </value>
             </param>
           </params>

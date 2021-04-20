@@ -73,11 +73,11 @@ public class TestBase {
 		OR.load(fs);
 	    excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\main\\java\\InputData\\"+pro.getProperty("ExcelsheetName")+".xlsx");
-	    //URL = pro.getProperty("URL");
+	   
 	}
 
 	public static void copyOutputFile() throws IOException {
-		File src = new File(System.getProperty("user.dir") + "\\src\\main\\java\\InputData\\TestData.xlsx");
+		File src = new File(System.getProperty("user.dir") + "\\src\\main\\java\\InputData\\"+pro.getProperty("ExcelsheetName")+".xlsx");
 		File dest = new File(
 				System.getProperty("user.dir") + "\\Outputs\\" + timeStamp + "\\Output_" + timeStamp + ".xlsx");
 		FileUtils.copyFile(src, dest);

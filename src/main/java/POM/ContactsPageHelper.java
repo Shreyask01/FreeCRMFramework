@@ -11,7 +11,7 @@ public class ContactsPageHelper extends TestBase {
 
 	//this is object repository for contacts page
 	
-	public void createConntacts() throws IOException {
+	public String createConntacts() throws IOException {
 		object_Click("contacts_XPATH");
 		object_Click("CreateContacts_XPATH");
 		setText("Firstname_XPATH",helper.get("FirstName"));
@@ -20,6 +20,14 @@ public class ContactsPageHelper extends TestBase {
 		clickByText("Social_XPATH", helper.get("social"));
 		object_Click("ContactsSave_XPATH");
 		
+		if(elementPresent("SuccessContacts_XPATH")) {
+			actualResult = getTextFromElement("SuccessContacts_XPATH");
+		}else if(elementPresent("BlankFirstName_XPATH")) {
+			actualResult = getTextFromElement("BlankFirstName_XPATH");
+		}else if(elementPresent("BlankLastName_XPATH")) {
+			actualResult = getTextFromElement("BlankLastName_XPATH");
+		}
+		return actualResult;
 	}
 	
 	//T
