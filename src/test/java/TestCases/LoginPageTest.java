@@ -46,7 +46,7 @@ public class LoginPageTest extends TestBase {
 			loginpagehelper = new LoginPageHelper();
 
 			// TestCase start 	
-			invokeBrowser(URL);
+			invokeBrowser();
 			result = loginpagehelper.login();
 			if (result.equals(expectedResult)) {
 				outputExcel.setCellData("loginPageTest", "Actual Result", rowNum, result);
