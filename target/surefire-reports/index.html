@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-skipped">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,  1 skipped,  3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Surefire_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTest">loginPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +118,17 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTest({RowNum=2, Description=, Actual Result=, Result=, Expected Result=Vaibhav Hatge, UserName=hatgevaibh...)">loginPageTest({RowNum=2, Description=, Actual Result=, Result=, Expected Result=Vaibhav Hatge, UserName=hatgevaibh...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.ContactsPageTest" class="method navigator-link" hash-for-method="contactsPageTest({RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=Th...)">contactsPageTest({RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=Th...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTest({RowNum=4, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=abc@gmail....)">loginPageTest({RowNum=4, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=abc@gmail....)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.ContactsPageTest" class="method navigator-link" hash-for-method="contactsPageTest({RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Resu...)">contactsPageTest({RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Resu...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.LoginPageTest" class="method navigator-link" hash-for-method="loginPageTest({RowNum=3, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=hatgevaibh...)">loginPageTest({RowNum=3, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=hatgevaibh...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="TestCases.ContactsPageTest" class="method navigator-link" hash-for-method="contactsPageTest({RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expe...)">contactsPageTest({RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expe...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -129,34 +143,56 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">TestCases.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPageTest({RowNum=2, Description=, Actual Result=, Result=, Expected Result=Vaibhav Hatge, UserName=hatgevaibh...)">
-                  </a> <!-- loginPageTest({RowNum=2, Description=, Actual Result=, Result=, Expected Result=Vaibhav Hatge, UserName=hatgevaibh...) -->
+                  <a name="loginPageTest">
+                  </a> <!-- loginPageTest -->
                   <span class="method-name">loginPageTest</span>
-                  <span class="parameters">({RowNum=2, Description=, Actual Result=, Result=, Expected Result=Vaibhav Hatge, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, URL=https://ui.freecrm.com/, rowNum=2, TC No.=1.0})</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NegativeArraySizeException: -1
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NegativeArraySizeException: -1
+	at Utilities.Utilities.getData(Utilities.java:44)
+	... 30 more
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.ContactsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contactsPageTest({RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=Th...)">
+                  </a> <!-- contactsPageTest({RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=Th...) -->
+                  <span class="method-name">contactsPageTest</span>
+                  <span class="parameters">({RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=The field First Name is required, Social=Twitter, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, rowNum=3, TC No.=2.0, Last Name=Kolambakar})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPageTest({RowNum=4, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=abc@gmail....)">
-                  </a> <!-- loginPageTest({RowNum=4, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=abc@gmail....) -->
-                  <span class="method-name">loginPageTest</span>
-                  <span class="parameters">({RowNum=4, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=abc@gmail.com, Password=Joker@007, URL=https://ui.freecrm.com/, rowNum=4, TC No.=3.0})</span>
+                  <a name="contactsPageTest({RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Resu...)">
+                  </a> <!-- contactsPageTest({RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Resu...) -->
+                  <span class="method-name">contactsPageTest</span>
+                  <span class="parameters">({RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Result=The field Last Name is required, Social=LinkedIn, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, rowNum=4, TC No.=3.0, Last Name=})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPageTest({RowNum=3, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=hatgevaibh...)">
-                  </a> <!-- loginPageTest({RowNum=3, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=hatgevaibh...) -->
-                  <span class="method-name">loginPageTest</span>
-                  <span class="parameters">({RowNum=3, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=hatgevaibhav69@gmail.com, Password=Abc, URL=https://ui.freecrm.com/, rowNum=3, TC No.=2.0})</span>
+                  <a name="contactsPageTest({RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expe...)">
+                  </a> <!-- contactsPageTest({RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expe...) -->
+                  <span class="method-name">contactsPageTest</span>
+                  <span class="parameters">({RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expected Result=Vaibhav Hatge, Social=Facebook, UserName=hatgevaibhav69@gmail.com, Password=Joker@007, rowNum=2, TC No.=1.0, Last Name=Hatge})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,6 +208,7 @@
 &lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;TestCases.ContactsPageTest&quot;/&gt;
       &lt;class name=&quot;TestCases.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
@@ -186,7 +223,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (1 class)</span>
+                <span class="test-name">Surefire test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,24 +249,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginPageTest')
-data.setCell(0, 2, 'TestCases.LoginPageTest')
-data.setCell(0, 3, 47520);
+data.setCell(0, 1, 'contactsPageTest')
+data.setCell(0, 2, 'TestCases.ContactsPageTest')
+data.setCell(0, 3, 99725);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginPageTest')
-data.setCell(1, 2, 'TestCases.LoginPageTest')
-data.setCell(1, 3, 13978);
+data.setCell(1, 1, 'contactsPageTest')
+data.setCell(1, 2, 'TestCases.ContactsPageTest')
+data.setCell(1, 3, 66222);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginPageTest')
-data.setCell(2, 2, 'TestCases.LoginPageTest')
-data.setCell(2, 3, 12155);
+data.setCell(2, 1, 'contactsPageTest')
+data.setCell(2, 2, 'TestCases.ContactsPageTest')
+data.setCell(2, 3, 40904);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginPageTest')
+data.setCell(3, 2, 'TestCases.LoginPageTest')
+data.setCell(3, 3, 0);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -244,9 +285,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.LoginPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Surefire_suite" class="panel">
@@ -255,22 +303,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.ContactsPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">loginPageTest({RowNum=2, Description=, Actual Result=, Result=, Expected Result=Vaibhav Hatge, UserName=hatgevaibh...)</span>
-                <span class="method-start">353 ms</span>
+                <span class="method-name">contactsPageTest({RowNum=2, Description=Valid First and Last Name, Actual Result=, Result=, First Name=Vaibhav , Expe...)</span>
+                <span class="method-start">977 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">loginPageTest({RowNum=3, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=hatgevaibh...)</span>
-                <span class="method-start">47876 ms</span>
+                <span class="method-name">contactsPageTest({RowNum=3, Description=First Name is blank, Actual Result=, Result=, First Name=, Expected Result=Th...)</span>
+                <span class="method-start">41885 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">loginPageTest({RowNum=4, Description=, Actual Result=, Result=, Expected Result=Invalid login, UserName=abc@gmail....)</span>
-                <span class="method-start">60032 ms</span>
+                <span class="method-name">contactsPageTest({RowNum=4, Description=Last name is blank, Actual Result=, Result=, First Name=Ankita, Expected Resu...)</span>
+                <span class="method-start">108108 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
