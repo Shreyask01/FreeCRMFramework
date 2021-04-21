@@ -26,6 +26,7 @@ import org.testng.annotations.BeforeSuite;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import org.testng.annotations.*;
 
 import Utilities.ExcelReader;
 import Utilities.Utilities;
