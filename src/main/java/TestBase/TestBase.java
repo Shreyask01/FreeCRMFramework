@@ -43,7 +43,8 @@ public class TestBase {
 	public static Hashtable<String, String> helper = new Hashtable<String, String>();
 	public static Hashtable<String, String> helper1 = new Hashtable<String, String>();
 	public static ExcelReader excel;
-
+	public static String username;
+    public static String password;
 
 	public static String timeStamp = new SimpleDateFormat("ddMMyyHHmmss").format(Calendar.getInstance().getTime());
   
@@ -75,6 +76,8 @@ public class TestBase {
 	    excel = new ExcelReader(
 				System.getProperty("user.dir") + "\\src\\main\\java\\InputData\\"+pro.getProperty("ExcelsheetName")+".xlsx");
 	   
+	    username = pro.getProperty("username");
+	    password = pro.getProperty("password");
 	}
 
 	public static void copyOutputFile() throws IOException {
@@ -105,6 +108,7 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+
 
 	public static void closeBrowser() {
 		driver.quit();
