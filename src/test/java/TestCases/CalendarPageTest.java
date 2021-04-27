@@ -25,22 +25,21 @@ public class CalendarPageTest extends TestBase {
 		try {
 		String TC = data.get("TC No.");
 		String title = data.get("Title");
-		String calendar = data.get("Calendar");
+		String calendar = data.get("Calender");
 		String Category = data.get("Category");
 		String StartDate = data.get("Start Date");
 		String EndDate = data.get("End Date");
         String expectedResult = data.get("Expected Result");  
-        			
-		rowNum = Integer.parseInt(data.get("rowNum"));
+        
+        rowNum = Integer.parseInt(data.get("rowNum"));
 
 		// Putting Data in another Hash table so that we can use in helper/POM
-
-		helper.put("Title", title);
+        helper.put("Title", title);
 		helper.put("Calendar", calendar);
 		helper.put("Category", Category);
 		helper.put("startDate", StartDate);
 		helper.put("endDate", EndDate);
-
+		
 		// Create Objects of Class
 		loginpagehelper = new LoginPageHelper();
 		calendarpagehelper = new CalendarPageHelper();
@@ -67,7 +66,6 @@ public class CalendarPageTest extends TestBase {
 		}
 
 	} catch (Exception e) {
-		test.log(LogStatus.FAIL, test.addScreenCapture(Utilities.capture(driver)) + e.getStackTrace());
 	} finally {
 		Utilities.flushExtentReport();
 		//closeBrowser();
